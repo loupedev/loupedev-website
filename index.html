@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>&#123;loupedev&#125;</title>
+	</head>
+
+	<body>
+		<p id="text"></p>
+	</body>
+
+	<script>
+		var i = 0;
+		var txt = "&#123;loupedev&#125;"; /* The text */
+		var speed = 50; /* The speed/duration of the effect in milliseconds */
+
+		function typeWriter() {
+			if (i < txt.length) {
+				document.getElementById("text").innerHTML += txt.charAt(i);
+				i++;
+				setTimeout(typeWriter, speed);
+			}
+		}
+	</script>
+</html>
